@@ -9,7 +9,7 @@ import ScrollToTop from "./components/feature/ScrollToTop";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      <BrowserRouter basename={__BASE_PATH__}>
+      <BrowserRouter basename={__BASE_PATH__.replace(/\/$/, "") || "/"}>
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">
